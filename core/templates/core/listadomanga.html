@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+<div class="container_listado">
+    <h2 class="titulo_contenedor_manga">Catalogo de manga</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Género</th>
+            <th>Año</th>
+            <th>Tomos</th>
+            <th>Editorial</th>
+        </tr>
+        {% for m in mangas %}
+            <tr>
+                <td>{{ m.nombre }}</td>
+                <td>{{ m.genero }}</td>
+                <td>{{ m.anio }}</td>
+                <td>{{ m.tomos }}</td>
+                <td>{{ m.editorial }}</td>
+                {% if user.is_authenticated %}
+                    {% if perms.core.change_manga %}
+                        <td><a href="{% url 'modificarmanga' m.id %}">Modificar</a></td>
+                    {% endif %}
+
+                    {% if perms.core.delete_manga %}    
+                        <td><a href="{% url 'eliminarmanga' m.id %}">Eliminar</a></td>
+                    {% endif %}
+                {% endif %}
+            </tr>
+            <tr>
+                <th rowspan="1">Sinopsis</th>
+            </tr>
+            <tr>
+                <td id="sipnosis-datos" colspan="75%">{{ m.sinopsis }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

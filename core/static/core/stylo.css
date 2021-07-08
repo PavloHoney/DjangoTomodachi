@@ -1,0 +1,120 @@
+#tituloDisp{
+    padding-top: 3%;
+}
+
+nav{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:bolder;
+    color: white;
+}
+
+nav > a{
+    color: white;
+}
+
+.container{
+    background-color: white;
+    padding-bottom: 5.5%;
+}
+
+.contenedor_mangas {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    min-height: 400px;
+    height: auto;
+    margin:auto;
+}
+
+.container_listado {
+    width: 75%;
+    background-color: rgb(255, 255, 255);
+    min-height: 400px;
+    height: auto;
+    margin:auto;
+}
+
+.container_listado th{
+    width: 75%;
+}
+
+.container_listado table{
+    background-color: rgb(255, 255, 255);
+    min-height: 400px;
+    margin:auto;
+    text-align: left;
+}
+
+#sipnosis-datos{
+    text-align: justify;
+}
+
+.manga {
+    width: 200px;
+    height: 350px;
+    border-top: 15px solid #b51e1e;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left:30px;
+    overflow: hidden;
+}
+
+.manga > img {
+    width: 200px;
+    transition: all 0.5s;
+}
+
+.manga > img:hover {
+    transform: scale(1.1);
+}
+
+.manga > a {
+    background-color:#b51e1e;
+    color:white;
+    text-decoration: none;
+    display: block;
+    padding:10px 55px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 10px;
+}
+
+.titulo_contenedor_manga {
+    color:#444343;
+    text-align: center;
+    margin-top:5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:bolder;
+}
+
+.manga > a {
+    padding: 10px 0;
+    text-align: center;
+    animation: animacion_ver_horarios;
+    animation-duration: 2s;
+}
+
+
+footer {
+    width: 100%;
+    height: 120px;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    background-color:rgb(255, 255, 255);
+}
+
+footer > div {
+    width: 25%;
+    float:left;
+}
+
+footer li {
+    list-style: none;
+}
+
+.logo_footer {
+    width: 200px;
+    margin-top:10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
